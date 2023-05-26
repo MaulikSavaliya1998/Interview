@@ -51,11 +51,11 @@ exports.logout = async (req, res, next) => {
 };
 
 // Get User Detail
-// exports.getUserDetails = async (req, res, next) => {
-//   const user = await User.findById(req.user.id);
+exports.getUserDetails = async (req, res, next) => {
+  const user = await User.findById(req.user.id);
 
-//   res.status(200).json({
-//     success: true,
-//     user,
-//   });
-// };
+  res.status(200).json({
+    success: true,
+    user,
+  });
+};
